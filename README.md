@@ -1,2 +1,2 @@
-# retailer_data_analyst
+# retailer_data_analysis
 retailer data 
