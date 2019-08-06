@@ -8,21 +8,14 @@ category_clothing <- farfetch1[farfetch1$category =="Clothing",]
 pp1 <- farfetch1[farfetch1$brand == "Philipp Plein",]
 pp1
 
+graph.function(data=pp1) 
 
-pp2 <- ggplot(data=pp1, aes(x=category, y=price))+
+pp2 <- graph.function(data=pp1) +
   geom_boxplot(aes(fill=category), outlier.color = NA)+
   coord_cartesian(ylim = c(0,3500))+
   xlab("Category")+
   ylab("Price")+
-  ggtitle("Brand-Philipp Plein") +
-  theme(axis.title.x = element_text(color="Black", size=30),
-        axis.title.y = element_text(color="Black", size=30),
-        axis.text.x = element_text(color="BLack", size=10),
-        axis.text.y = element_text(color="Black", size=15),
-        plot.title = element_text(size = 40),
-        legend.title = element_text(size=10),
-        legend.text = element_text(size=10),
-        text = element_text(family = "Comic Sans MS"))
+  ggtitle("Brand-Philipp Plein")
 pp2
 
 
@@ -33,64 +26,46 @@ pp2
 liska <- farfetch1[farfetch1$brand == "Liska",]
 liska
 
+graph.function(data=liska) 
 
-liska1 <- ggplot(data=liska, aes(x=category, y=price))+
+liska1 <- graph.function(data=liska) +
   geom_boxplot(aes(fill=category), outlier.color = NA)+
   coord_cartesian(ylim = c(0,10000))+
   xlab("Category")+
   ylab("Price")+
-  ggtitle("Brand-Liska") +
-  theme(axis.title.x = element_text(color="Black", size=30),
-        axis.title.y = element_text(color="Black", size=30),
-        axis.text.x = element_text(color="BLack", size=10),
-        axis.text.y = element_text(color="Black", size=15),
-        plot.title = element_text(size = 40),
-        legend.title = element_text(size=10),
-        legend.text = element_text(size=10),
-        text = element_text(family = "Comic Sans MS"))
+  ggtitle("Brand-Liska")
+
 liska1
 
 -------------#Thom Browne products' in different categories with price---------------------------
 
 tb <- farfetch1[farfetch1$brand == "Thom Browne",]
 tb
-tb1  <- ggplot(data=tb, aes(x=category, y=price))+
+
+graph.function(data=tb) 
+
+tb1 <- graph.function(data=tb) +
   geom_boxplot(aes(fill=category), outlier.color = NA)+
   coord_cartesian(ylim = c(0,5000))+
   xlab("Category")+
   ylab("Price")+
-  ggtitle("Brand-Thom Browne") +
-  theme(axis.title.x = element_text(color="Black", size=30),
-        axis.title.y = element_text(color="Black", size=30),
-        axis.text.x = element_text(color="BLack", size=10),
-        axis.text.y = element_text(color="Black", size=15),
-        plot.title = element_text(size = 40),
-        legend.title = element_text(size=20),
-        legend.text = element_text(size=20),
-        text = element_text(family = "Comic Sans MS"))
+  ggtitle("Brand-Thom Browne")
 
 tb1
-
 
 
 -------# marchesa products' in different categories with price--------------
   
 marchesa<- farfetch1[farfetch1$brand == "Marchesa",]
 marchesa
-marchesa1  <- ggplot(data=marchesa, aes(x=category, y=price))+
+
+marchesa1  <- 
+  graph.function(data=marchesa) +
   geom_boxplot(aes(fill=category), outlier.color = NA)+
   coord_cartesian(ylim = c(0,10000))+
   xlab("Category")+
   ylab("Price")+
-  ggtitle("Brand-Marchesa") +
-  theme(axis.title.x = element_text(color="Black", size=30),
-        axis.title.y = element_text(color="Black", size=30),
-        axis.text.x = element_text(color="BLack", size=10),
-        axis.text.y = element_text(color="Black", size=15),
-        plot.title = element_text(size = 40),
-        legend.title = element_text(size=20),
-        legend.text = element_text(size=20),
-        text = element_text(family = "Comic Sans MS"))
+  ggtitle("Brand-Marchesa")
 
 marchesa1
 
@@ -98,20 +73,14 @@ marchesa1
   
 caramila<- farfetch1[farfetch1$brand == "Cara Mila",]
 caramila
-caramila1  <- ggplot(data=marchesa, aes(x=category, y=price))+
+
+caramila1  <- 
+  graph.function(data=caramila) +
   geom_boxplot(aes(fill=category), outlier.color = NA)+
   coord_cartesian(ylim = c(0,10000))+
   xlab("Category")+
   ylab("Price")+
-  ggtitle("Brand-Cara Mila") +
-  theme(axis.title.x = element_text(color="Black", size=30),
-        axis.title.y = element_text(color="Black", size=30),
-        axis.text.x = element_text(color="BLack", size=10),
-        axis.text.y = element_text(color="Black", size=15),
-        plot.title = element_text(size = 40),
-        legend.title = element_text(size=20),
-        legend.text = element_text(size=20),
-        text = element_text(family = "Comic Sans MS"))
+  ggtitle("Brand-Cara Mila")
 
 caramila1
 

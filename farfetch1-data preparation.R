@@ -31,9 +31,19 @@ row_na[1:317447,]
 
 
 
+-----------#define a graph theme function---------------------
 
-
-
+graph.function <- function(data) {
+  ggplot(data,aes(x=category, y=price)) +
+    theme(axis.title.x = element_text(color="Black", size=30),
+          axis.title.y = element_text(color="Black", size=30),
+          axis.text.x = element_text(color="BLack", size=10),
+          axis.text.y = element_text(color="Black", size=15),
+          plot.title = element_text(size = 40),
+          legend.title = element_text(size=10),
+          legend.text = element_text(size=10),
+          text = element_text(family = "Comic Sans MS"))
+}
 
 
 
